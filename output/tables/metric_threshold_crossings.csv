@@ -1,0 +1,683 @@
+country,year,domar_cross,wicksell_cross,ema_cross,isf_cross,idec_cross
+Argentina,1994,False,False,False,False,True
+Argentina,1995,True,False,True,False,False
+Argentina,1996,True,False,True,False,False
+Argentina,1997,False,False,True,False,False
+Argentina,1998,True,False,False,False,True
+Argentina,1999,True,False,False,False,True
+Argentina,2000,True,False,False,False,True
+Argentina,2001,True,False,True,False,True
+Argentina,2002,False,False,False,False,False
+Argentina,2003,False,True,True,False,False
+Argentina,2004,False,True,True,False,False
+Argentina,2005,False,True,True,False,False
+Argentina,2006,False,True,True,False,False
+Argentina,2007,False,True,True,False,False
+Argentina,2008,False,False,True,False,False
+Argentina,2009,False,False,False,False,True
+Argentina,2010,False,True,True,False,True
+Argentina,2011,False,True,True,False,True
+Argentina,2012,False,True,True,False,True
+Argentina,2013,False,True,True,False,True
+Argentina,2014,False,False,True,False,True
+Argentina,2015,False,False,True,False,True
+Argentina,2016,False,False,False,False,True
+Argentina,2017,False,True,True,False,True
+Argentina,2018,False,False,False,False,True
+Argentina,2019,False,False,False,False,True
+Argentina,2020,False,True,True,False,True
+Argentina,2021,False,True,True,False,False
+Argentina,2022,False,True,True,False,True
+Argentina,2023,False,True,True,False,False
+Argentina,2024,False,True,True,False,False
+Australia,1994,True,False,False,False,False
+Australia,1995,True,False,True,False,False
+Australia,1996,False,False,True,False,False
+Australia,1997,False,False,False,False,False
+Australia,1998,False,False,False,False,False
+Australia,1999,False,True,True,False,False
+Australia,2000,False,False,False,False,False
+Australia,2001,False,False,False,False,False
+Australia,2002,False,False,True,False,False
+Australia,2003,False,True,True,False,False
+Australia,2004,False,True,True,False,False
+Australia,2005,False,False,True,False,False
+Australia,2006,False,True,True,False,False
+Australia,2007,False,True,True,False,False
+Australia,2008,True,False,True,False,False
+Australia,2009,True,True,False,False,False
+Australia,2010,True,False,True,False,False
+Australia,2011,True,False,True,False,False
+Australia,2012,True,False,True,False,False
+Australia,2013,True,False,False,False,False
+Australia,2014,True,False,False,False,False
+Australia,2015,True,False,False,False,False
+Australia,2016,True,True,False,False,False
+Australia,2017,False,False,True,False,False
+Australia,2018,False,True,True,False,False
+Australia,2019,True,False,False,False,False
+Australia,2020,True,True,False,False,False
+Australia,2021,True,True,True,False,False
+Australia,2022,False,True,True,False,False
+Australia,2023,False,False,False,False,False
+Australia,2024,True,False,False,False,False
+Brazil,1994,False,False,False,False,False
+Brazil,1995,False,False,True,False,False
+Brazil,1996,False,False,True,False,True
+Brazil,1997,False,False,False,False,True
+Brazil,1998,False,False,False,False,True
+Brazil,1999,False,False,False,False,True
+Brazil,2000,False,False,True,False,True
+Brazil,2001,False,False,False,False,True
+Brazil,2002,False,False,False,False,True
+Brazil,2003,False,False,True,True,True
+Brazil,2004,False,False,True,False,True
+Brazil,2005,False,False,True,False,True
+Brazil,2006,False,False,True,False,True
+Brazil,2007,False,False,True,False,True
+Brazil,2008,False,False,False,False,True
+Brazil,2009,False,True,False,False,True
+Brazil,2010,False,True,True,False,True
+Brazil,2011,False,False,True,False,True
+Brazil,2012,False,True,False,False,True
+Brazil,2013,False,True,False,False,True
+Brazil,2014,True,False,False,False,True
+Brazil,2015,True,False,False,True,True
+Brazil,2016,True,False,True,False,True
+Brazil,2017,True,False,True,False,True
+Brazil,2018,True,False,False,False,True
+Brazil,2019,True,True,False,False,True
+Brazil,2020,True,True,False,False,True
+Brazil,2021,False,True,True,False,True
+Brazil,2022,False,False,True,False,True
+Brazil,2023,True,False,True,False,True
+Brazil,2024,True,False,False,False,True
+Canada,1994,True,False,False,False,False
+Canada,1995,True,False,False,False,False
+Canada,1996,False,False,True,False,False
+Canada,1997,False,False,False,False,False
+Canada,1998,False,False,False,False,False
+Canada,1999,False,True,False,False,False
+Canada,2000,False,False,True,False,False
+Canada,2001,False,False,False,False,False
+Canada,2002,False,True,False,False,False
+Canada,2003,False,False,True,False,False
+Canada,2004,False,True,True,False,False
+Canada,2005,False,False,True,False,False
+Canada,2006,False,False,True,False,False
+Canada,2007,False,True,True,False,False
+Canada,2008,False,False,True,False,False
+Canada,2009,True,True,False,False,False
+Canada,2010,False,False,True,False,False
+Canada,2011,False,False,True,False,False
+Canada,2012,False,True,False,False,False
+Canada,2013,False,True,False,False,False
+Canada,2014,False,False,False,False,False
+Canada,2015,True,False,False,False,False
+Canada,2016,False,True,False,False,False
+Canada,2017,False,False,True,False,False
+Canada,2018,False,False,False,False,False
+Canada,2019,False,False,False,False,False
+Canada,2020,True,True,True,False,False
+Canada,2021,False,False,True,False,False
+Canada,2022,False,True,True,False,False
+Canada,2023,False,False,False,False,False
+Canada,2024,False,False,False,False,False
+China,1994,False,False,False,False,False
+China,1995,False,False,True,False,False
+China,1996,False,False,True,False,False
+China,1997,False,False,True,False,False
+China,1998,False,False,False,False,False
+China,1999,True,False,False,False,False
+China,2000,True,False,False,False,False
+China,2001,True,False,True,False,False
+China,2002,True,False,False,False,False
+China,2003,False,True,True,False,False
+China,2004,False,True,True,False,False
+China,2005,False,True,True,False,False
+China,2006,False,True,True,False,False
+China,2007,False,True,True,False,False
+China,2008,False,False,True,False,False
+China,2009,False,True,True,False,False
+China,2010,False,True,True,False,False
+China,2011,False,False,True,False,False
+China,2012,False,False,True,False,False
+China,2013,False,False,True,False,False
+China,2014,False,False,False,False,False
+China,2015,False,False,False,False,False
+China,2016,False,True,False,False,False
+China,2017,False,True,False,False,False
+China,2018,False,False,True,False,False
+China,2019,True,False,False,False,False
+China,2020,True,True,False,False,False
+China,2021,False,False,True,False,False
+China,2022,True,False,False,False,False
+China,2023,True,False,False,False,False
+China,2024,True,False,False,False,False
+Euro Area,1994,False,False,False,False,False
+Euro Area,1995,True,False,True,False,False
+Euro Area,1996,True,False,False,False,False
+Euro Area,1997,False,False,False,False,False
+Euro Area,1998,False,False,False,False,False
+Euro Area,1999,False,True,False,False,True
+Euro Area,2000,False,False,False,False,True
+Euro Area,2001,False,False,False,False,True
+Euro Area,2002,True,True,True,False,True
+Euro Area,2003,True,True,True,False,True
+Euro Area,2004,False,True,True,False,True
+Euro Area,2005,False,True,True,False,True
+Euro Area,2006,False,False,True,False,True
+Euro Area,2007,False,False,True,False,True
+Euro Area,2008,True,False,True,False,True
+Euro Area,2009,True,True,False,False,True
+Euro Area,2010,True,True,False,False,True
+Euro Area,2011,True,True,True,False,True
+Euro Area,2012,True,True,False,False,True
+Euro Area,2013,True,False,True,False,True
+Euro Area,2014,True,True,False,False,True
+Euro Area,2015,False,True,False,False,True
+Euro Area,2016,False,True,False,False,True
+Euro Area,2017,False,True,True,False,True
+Euro Area,2018,False,True,True,False,True
+Euro Area,2019,False,True,False,False,True
+Euro Area,2020,True,True,True,False,True
+Euro Area,2021,False,True,True,False,True
+Euro Area,2022,False,True,False,False,True
+Euro Area,2023,False,False,True,False,True
+Euro Area,2024,False,False,True,False,True
+Global Aggregate,1994,False,False,False,False,False
+Global Aggregate,1995,False,False,True,False,False
+Global Aggregate,1996,False,False,False,False,False
+Global Aggregate,1997,False,True,False,False,False
+Global Aggregate,1998,False,False,False,False,False
+Global Aggregate,1999,False,True,False,False,False
+Global Aggregate,2000,False,True,False,False,False
+Global Aggregate,2001,False,False,False,False,False
+Global Aggregate,2002,False,False,True,False,False
+Global Aggregate,2003,False,True,True,False,False
+Global Aggregate,2004,False,True,True,False,False
+Global Aggregate,2005,False,True,True,False,False
+Global Aggregate,2006,False,True,True,False,False
+Global Aggregate,2007,False,True,True,False,False
+Global Aggregate,2008,False,False,True,False,False
+Global Aggregate,2009,True,True,False,False,False
+Global Aggregate,2010,False,True,True,False,False
+Global Aggregate,2011,False,False,True,False,False
+Global Aggregate,2012,False,False,False,False,False
+Global Aggregate,2013,False,False,False,False,False
+Global Aggregate,2014,False,False,False,False,False
+Global Aggregate,2015,False,False,False,False,False
+Global Aggregate,2016,False,True,False,False,False
+Global Aggregate,2017,False,True,True,False,False
+Global Aggregate,2018,False,False,True,False,False
+Global Aggregate,2019,False,False,False,False,False
+Global Aggregate,2020,True,True,False,False,False
+Global Aggregate,2021,False,True,True,False,False
+Global Aggregate,2022,False,True,False,False,False
+Global Aggregate,2023,False,False,True,False,False
+Global Aggregate,2024,False,False,False,False,False
+Greece,1994,False,False,False,True,False
+Greece,1995,False,False,False,True,False
+Greece,1996,False,False,False,True,False
+Greece,1997,False,False,False,True,False
+Greece,1998,False,False,False,False,False
+Greece,1999,True,False,False,False,False
+Greece,2000,False,False,False,False,False
+Greece,2001,False,False,False,False,False
+Greece,2002,False,True,False,False,False
+Greece,2003,False,True,False,False,False
+Greece,2004,True,False,False,False,False
+Greece,2005,True,True,False,False,False
+Greece,2006,False,True,False,False,False
+Greece,2007,True,True,False,False,False
+Greece,2008,True,False,False,False,False
+Greece,2009,True,False,False,False,False
+Greece,2010,True,True,False,False,False
+Greece,2011,True,False,False,False,False
+Greece,2012,True,False,False,False,False
+Greece,2013,True,False,False,False,False
+Greece,2014,True,False,False,False,False
+Greece,2015,True,False,False,False,False
+Greece,2016,True,False,False,False,False
+Greece,2017,False,False,False,False,False
+Greece,2018,False,False,False,False,True
+Greece,2019,False,False,False,False,False
+Greece,2020,True,False,False,False,False
+Greece,2021,False,True,False,False,False
+Greece,2022,False,True,False,False,True
+Greece,2023,False,False,False,False,False
+Greece,2024,False,False,False,False,False
+India,1994,False,False,False,False,False
+India,1995,False,False,False,False,False
+India,1996,False,False,False,False,False
+India,1997,True,False,False,True,False
+India,1998,False,False,False,True,False
+India,1999,True,False,False,True,False
+India,2000,True,False,False,True,False
+India,2001,True,False,False,True,False
+India,2002,True,False,False,True,False
+India,2003,True,True,True,True,False
+India,2004,False,True,True,True,False
+India,2005,False,True,True,True,False
+India,2006,False,True,True,True,False
+India,2007,False,True,True,True,True
+India,2008,False,False,False,True,True
+India,2009,False,True,True,True,True
+India,2010,False,True,True,True,False
+India,2011,False,False,True,True,False
+India,2012,False,False,False,True,False
+India,2013,False,False,False,True,False
+India,2014,True,False,False,True,True
+India,2015,True,False,False,True,True
+India,2016,False,False,False,True,True
+India,2017,False,False,True,True,True
+India,2018,False,False,False,True,True
+India,2019,True,True,False,True,True
+India,2020,True,True,False,True,True
+India,2021,False,True,True,True,True
+India,2022,False,False,False,True,True
+India,2023,False,False,False,True,True
+India,2024,False,False,False,True,True
+Indonesia,1994,False,False,False,False,False
+Indonesia,1995,False,False,True,False,False
+Indonesia,1996,False,False,True,False,False
+Indonesia,1997,False,False,False,False,False
+Indonesia,1998,False,False,True,True,False
+Indonesia,1999,False,False,True,True,False
+Indonesia,2000,False,False,False,True,False
+Indonesia,2001,False,False,False,True,False
+Indonesia,2002,False,False,True,True,True
+Indonesia,2003,False,False,True,False,True
+Indonesia,2004,False,False,True,False,True
+Indonesia,2005,False,False,True,False,True
+Indonesia,2006,False,False,True,False,True
+Indonesia,2007,False,True,True,False,True
+Indonesia,2008,False,False,True,False,True
+Indonesia,2009,False,False,False,False,True
+Indonesia,2010,False,False,True,False,True
+Indonesia,2011,False,False,True,False,True
+Indonesia,2012,False,True,False,False,True
+Indonesia,2013,False,False,False,False,True
+Indonesia,2014,False,False,False,False,True
+Indonesia,2015,True,False,False,False,True
+Indonesia,2016,True,True,True,False,True
+Indonesia,2017,False,True,True,False,True
+Indonesia,2018,False,False,False,False,True
+Indonesia,2019,True,False,False,False,True
+Indonesia,2020,True,True,False,False,True
+Indonesia,2021,True,True,True,False,True
+Indonesia,2022,False,False,True,False,True
+Indonesia,2023,False,False,False,False,True
+Indonesia,2024,False,False,False,False,True
+Ireland,1994,False,False,False,False,False
+Ireland,1995,False,False,False,False,False
+Ireland,1996,False,False,False,False,False
+Ireland,1997,False,False,False,False,False
+Ireland,1998,False,False,False,False,False
+Ireland,1999,False,True,False,False,False
+Ireland,2000,False,True,False,False,False
+Ireland,2001,False,True,False,False,False
+Ireland,2002,False,True,False,False,False
+Ireland,2003,False,True,False,False,False
+Ireland,2004,False,True,False,False,False
+Ireland,2005,False,True,False,False,False
+Ireland,2006,False,False,False,False,False
+Ireland,2007,False,False,False,False,False
+Ireland,2008,True,False,False,False,False
+Ireland,2009,True,False,False,False,False
+Ireland,2010,True,False,False,False,False
+Ireland,2011,True,False,False,False,False
+Ireland,2012,True,True,False,False,False
+Ireland,2013,True,False,False,False,False
+Ireland,2014,False,True,False,False,False
+Ireland,2015,False,False,False,False,False
+Ireland,2016,False,False,False,False,False
+Ireland,2017,False,False,False,False,False
+Ireland,2018,False,True,False,False,False
+Ireland,2019,False,False,False,False,False
+Ireland,2020,True,True,False,False,False
+Ireland,2021,False,True,False,False,False
+Ireland,2022,False,True,False,False,False
+Ireland,2023,False,False,False,False,False
+Ireland,2024,False,False,False,False,False
+Italy,1994,True,True,False,True,True
+Italy,1995,False,False,False,True,False
+Italy,1996,True,False,False,True,False
+Italy,1997,False,False,False,False,False
+Italy,1998,False,False,False,False,False
+Italy,1999,False,False,False,False,False
+Italy,2000,False,True,False,False,False
+Italy,2001,False,False,False,False,False
+Italy,2002,False,False,False,False,False
+Italy,2003,True,True,False,False,False
+Italy,2004,False,False,False,False,False
+Italy,2005,True,True,False,False,False
+Italy,2006,False,True,False,False,False
+Italy,2007,False,True,False,False,False
+Italy,2008,True,False,False,False,False
+Italy,2009,True,False,False,False,False
+Italy,2010,True,False,False,False,False
+Italy,2011,True,True,False,False,False
+Italy,2012,True,True,False,False,False
+Italy,2013,True,False,False,False,False
+Italy,2014,True,False,False,False,False
+Italy,2015,False,True,False,False,False
+Italy,2016,False,False,False,False,False
+Italy,2017,False,True,False,False,False
+Italy,2018,False,False,False,False,False
+Italy,2019,False,False,False,False,False
+Italy,2020,True,False,False,False,False
+Italy,2021,False,False,False,False,False
+Italy,2022,False,True,False,False,False
+Italy,2023,False,False,False,False,False
+Italy,2024,False,False,False,False,False
+Japan,1994,True,False,False,False,False
+Japan,1995,True,True,True,False,False
+Japan,1996,True,False,False,False,False
+Japan,1997,True,True,False,False,False
+Japan,1998,True,False,False,False,False
+Japan,1999,True,True,True,False,False
+Japan,2000,True,True,True,False,False
+Japan,2001,True,False,False,False,False
+Japan,2002,True,False,False,False,False
+Japan,2003,True,False,True,False,False
+Japan,2004,True,False,True,False,False
+Japan,2005,True,False,False,False,False
+Japan,2006,True,True,False,False,False
+Japan,2007,True,False,False,False,False
+Japan,2008,True,False,True,False,False
+Japan,2009,True,False,True,False,False
+Japan,2010,True,False,True,False,False
+Japan,2011,True,False,True,False,False
+Japan,2012,True,False,False,False,False
+Japan,2013,True,True,False,False,False
+Japan,2014,True,False,False,False,False
+Japan,2015,False,False,False,False,False
+Japan,2016,True,False,True,False,False
+Japan,2017,False,False,False,False,False
+Japan,2018,True,False,False,False,False
+Japan,2019,True,True,False,False,False
+Japan,2020,True,False,True,False,False
+Japan,2021,False,True,False,False,False
+Japan,2022,True,True,False,False,False
+Japan,2023,False,True,False,False,False
+Japan,2024,False,True,False,False,False
+Lebanon,1994,False,False,False,True,False
+Lebanon,1995,False,False,True,True,False
+Lebanon,1996,False,False,True,True,False
+Lebanon,1997,False,False,True,True,False
+Lebanon,1998,False,False,True,True,False
+Lebanon,1999,False,False,True,True,False
+Lebanon,2000,True,False,False,True,False
+Lebanon,2001,True,False,False,True,False
+Lebanon,2002,True,False,True,True,False
+Lebanon,2003,True,False,False,True,False
+Lebanon,2004,False,False,True,True,False
+Lebanon,2005,True,False,False,True,False
+Lebanon,2006,True,False,False,True,False
+Lebanon,2007,False,False,True,True,False
+Lebanon,2008,False,False,True,True,False
+Lebanon,2009,False,False,True,True,False
+Lebanon,2010,False,False,False,True,False
+Lebanon,2011,True,False,True,True,False
+Lebanon,2012,False,False,True,True,False
+Lebanon,2013,True,False,True,True,False
+Lebanon,2014,True,False,False,True,False
+Lebanon,2015,True,False,True,True,False
+Lebanon,2016,True,False,False,True,False
+Lebanon,2017,True,False,True,True,False
+Lebanon,2018,True,False,True,True,False
+Lebanon,2019,True,False,True,True,False
+Lebanon,2020,False,False,False,False,False
+Lebanon,2021,False,False,True,False,False
+Lebanon,2022,False,False,False,False,False
+Lebanon,2023,False,False,True,False,False
+Lebanon,2024,False,False,False,False,False
+Mexico,1994,False,False,False,False,False
+Mexico,1995,False,False,False,True,False
+Mexico,1996,False,False,True,True,False
+Mexico,1997,False,False,True,False,False
+Mexico,1998,False,False,True,False,False
+Mexico,1999,False,False,True,False,False
+Mexico,2000,False,False,True,False,False
+Mexico,2001,True,False,True,True,False
+Mexico,2002,True,False,False,False,False
+Mexico,2003,False,True,False,False,False
+Mexico,2004,False,True,True,False,False
+Mexico,2005,False,False,True,False,False
+Mexico,2006,False,False,True,False,False
+Mexico,2007,False,False,True,False,False
+Mexico,2008,False,False,True,False,False
+Mexico,2009,True,False,False,False,False
+Mexico,2010,True,True,True,False,False
+Mexico,2011,True,False,True,False,False
+Mexico,2012,True,False,False,False,False
+Mexico,2013,True,True,True,False,False
+Mexico,2014,True,True,False,False,False
+Mexico,2015,True,True,False,False,False
+Mexico,2016,False,True,False,False,False
+Mexico,2017,False,False,True,False,False
+Mexico,2018,False,False,True,False,False
+Mexico,2019,True,False,True,False,False
+Mexico,2020,True,True,False,False,False
+Mexico,2021,False,True,True,False,False
+Mexico,2022,False,False,True,True,False
+Mexico,2023,True,False,True,True,False
+Mexico,2024,True,False,False,True,False
+Portugal,1994,True,False,False,False,True
+Portugal,1995,True,False,False,False,False
+Portugal,1996,True,False,False,False,False
+Portugal,1997,False,False,False,False,False
+Portugal,1998,False,False,False,False,False
+Portugal,1999,False,True,False,False,False
+Portugal,2000,False,False,False,False,False
+Portugal,2001,True,False,False,False,False
+Portugal,2002,True,False,False,False,False
+Portugal,2003,True,False,False,False,False
+Portugal,2004,True,True,False,False,False
+Portugal,2005,True,True,False,False,True
+Portugal,2006,True,True,False,False,True
+Portugal,2007,False,False,False,False,True
+Portugal,2008,True,False,False,False,True
+Portugal,2009,True,False,False,False,True
+Portugal,2010,True,False,False,False,False
+Portugal,2011,True,False,False,False,False
+Portugal,2012,True,True,False,False,False
+Portugal,2013,True,False,False,False,False
+Portugal,2014,True,True,False,False,False
+Portugal,2015,False,True,False,False,False
+Portugal,2016,False,False,False,False,False
+Portugal,2017,False,False,False,False,False
+Portugal,2018,False,False,False,False,False
+Portugal,2019,False,False,False,False,False
+Portugal,2020,True,False,False,False,False
+Portugal,2021,False,True,False,False,False
+Portugal,2022,False,True,False,False,False
+Portugal,2023,False,True,False,False,False
+Portugal,2024,False,False,False,False,False
+Saudi Arabia,1994,True,False,False,False,False
+Saudi Arabia,1995,True,False,True,False,False
+Saudi Arabia,1996,False,False,True,False,False
+Saudi Arabia,1997,False,False,False,False,False
+Saudi Arabia,1998,True,False,False,False,True
+Saudi Arabia,1999,False,False,True,False,True
+Saudi Arabia,2000,False,False,True,False,True
+Saudi Arabia,2001,True,True,False,False,True
+Saudi Arabia,2002,True,True,True,False,True
+Saudi Arabia,2003,False,True,True,False,True
+Saudi Arabia,2004,False,True,True,False,True
+Saudi Arabia,2005,False,True,True,False,True
+Saudi Arabia,2006,False,False,True,False,True
+Saudi Arabia,2007,False,True,True,False,True
+Saudi Arabia,2008,False,False,True,False,False
+Saudi Arabia,2009,True,True,False,False,True
+Saudi Arabia,2010,False,True,True,False,True
+Saudi Arabia,2011,False,False,True,False,True
+Saudi Arabia,2012,False,False,True,False,True
+Saudi Arabia,2013,False,False,False,False,True
+Saudi Arabia,2014,True,False,False,False,True
+Saudi Arabia,2015,True,False,False,False,True
+Saudi Arabia,2016,True,True,False,False,True
+Saudi Arabia,2017,True,True,True,False,True
+Saudi Arabia,2018,True,False,False,False,True
+Saudi Arabia,2019,True,False,False,False,True
+Saudi Arabia,2020,True,True,False,False,True
+Saudi Arabia,2021,False,True,False,False,True
+Saudi Arabia,2022,False,False,False,False,True
+Saudi Arabia,2023,True,False,False,False,True
+Saudi Arabia,2024,True,False,False,False,True
+South Korea,1994,False,False,False,False,False
+South Korea,1995,False,False,True,False,False
+South Korea,1996,False,False,False,False,False
+South Korea,1997,False,False,False,False,False
+South Korea,1998,False,False,False,False,False
+South Korea,1999,False,False,True,False,False
+South Korea,2000,False,True,True,False,True
+South Korea,2001,False,True,False,False,True
+South Korea,2002,False,True,True,False,True
+South Korea,2003,False,True,True,False,True
+South Korea,2004,False,False,True,False,True
+South Korea,2005,False,False,True,False,True
+South Korea,2006,False,True,True,False,True
+South Korea,2007,False,True,True,False,True
+South Korea,2008,False,False,False,False,True
+South Korea,2009,False,True,False,False,True
+South Korea,2010,False,False,True,False,True
+South Korea,2011,False,False,True,False,True
+South Korea,2012,False,False,False,False,True
+South Korea,2013,False,False,True,False,True
+South Korea,2014,False,True,True,False,True
+South Korea,2015,False,False,False,False,True
+South Korea,2016,False,False,False,False,True
+South Korea,2017,False,False,True,False,True
+South Korea,2018,False,False,True,False,True
+South Korea,2019,False,False,False,False,True
+South Korea,2020,True,True,False,False,True
+South Korea,2021,False,True,True,False,True
+South Korea,2022,False,False,False,False,True
+South Korea,2023,False,False,False,False,True
+South Korea,2024,False,False,False,False,True
+Spain,1994,True,False,False,False,True
+Spain,1995,True,False,False,False,False
+Spain,1996,True,False,False,False,False
+Spain,1997,False,False,False,False,False
+Spain,1998,False,False,False,False,False
+Spain,1999,False,True,False,False,False
+Spain,2000,False,False,False,False,False
+Spain,2001,False,False,False,False,False
+Spain,2002,False,False,False,False,False
+Spain,2003,False,False,False,False,False
+Spain,2004,False,True,False,False,False
+Spain,2005,False,True,False,False,False
+Spain,2006,False,True,False,False,False
+Spain,2007,False,True,False,False,False
+Spain,2008,True,False,False,False,False
+Spain,2009,True,False,False,False,False
+Spain,2010,True,False,False,False,False
+Spain,2011,True,False,False,False,False
+Spain,2012,True,True,False,False,False
+Spain,2013,True,False,False,False,False
+Spain,2014,True,False,False,False,False
+Spain,2015,True,False,False,False,False
+Spain,2016,True,True,False,False,False
+Spain,2017,False,True,False,False,False
+Spain,2018,False,False,False,False,False
+Spain,2019,False,False,False,False,False
+Spain,2020,True,False,False,False,False
+Spain,2021,False,False,False,False,False
+Spain,2022,False,True,False,False,False
+Spain,2023,False,False,False,False,False
+Spain,2024,False,False,False,False,False
+Turkey,1994,False,False,False,False,False
+Turkey,1995,False,False,True,False,False
+Turkey,1996,False,False,True,False,False
+Turkey,1997,False,False,True,False,False
+Turkey,1998,False,False,True,False,False
+Turkey,1999,False,False,True,False,False
+Turkey,2000,False,False,True,True,False
+Turkey,2001,False,False,True,True,False
+Turkey,2002,False,False,True,True,False
+Turkey,2003,False,False,True,True,False
+Turkey,2004,False,False,True,True,False
+Turkey,2005,False,False,True,False,False
+Turkey,2006,False,False,False,False,False
+Turkey,2007,False,False,True,False,True
+Turkey,2008,False,False,True,False,True
+Turkey,2009,True,True,False,False,True
+Turkey,2010,False,True,True,False,True
+Turkey,2011,False,True,False,False,True
+Turkey,2012,False,True,False,False,True
+Turkey,2013,False,True,False,False,True
+Turkey,2014,False,False,False,False,False
+Turkey,2015,False,False,False,False,False
+Turkey,2016,False,True,False,False,False
+Turkey,2017,False,True,False,False,False
+Turkey,2018,False,False,False,False,False
+Turkey,2019,True,False,False,False,False
+Turkey,2020,True,True,False,False,False
+Turkey,2021,False,True,True,False,False
+Turkey,2022,False,True,True,False,False
+Turkey,2023,False,True,True,False,False
+Turkey,2024,False,False,True,False,False
+United Kingdom,1994,True,False,False,False,True
+United Kingdom,1995,True,False,True,False,True
+United Kingdom,1996,True,False,True,False,True
+United Kingdom,1997,True,False,True,False,False
+United Kingdom,1998,False,False,True,False,False
+United Kingdom,1999,False,False,False,False,False
+United Kingdom,2000,False,False,False,False,False
+United Kingdom,2001,False,False,False,False,False
+United Kingdom,2002,True,True,True,False,False
+United Kingdom,2003,True,True,True,False,False
+United Kingdom,2004,True,True,True,False,False
+United Kingdom,2005,True,True,True,False,False
+United Kingdom,2006,True,False,True,False,False
+United Kingdom,2007,True,False,True,False,False
+United Kingdom,2008,True,False,False,False,False
+United Kingdom,2009,True,False,False,False,False
+United Kingdom,2010,True,True,False,False,False
+United Kingdom,2011,True,True,True,False,False
+United Kingdom,2012,True,True,False,False,False
+United Kingdom,2013,True,False,False,False,False
+United Kingdom,2014,True,False,True,False,False
+United Kingdom,2015,True,False,False,False,False
+United Kingdom,2016,False,False,False,False,False
+United Kingdom,2017,False,True,False,False,False
+United Kingdom,2018,False,False,True,False,False
+United Kingdom,2019,False,False,False,False,False
+United Kingdom,2020,True,True,True,False,False
+United Kingdom,2021,False,True,True,False,False
+United Kingdom,2022,False,True,False,False,False
+United Kingdom,2023,False,False,True,False,False
+United Kingdom,2024,True,False,True,False,False
+United States,1994,False,False,False,False,False
+United States,1995,False,False,True,False,False
+United States,1996,False,False,False,False,False
+United States,1997,False,False,False,False,False
+United States,1998,False,False,False,False,False
+United States,1999,False,False,False,False,False
+United States,2000,False,False,True,False,False
+United States,2001,False,False,True,False,False
+United States,2002,True,False,False,False,False
+United States,2003,True,True,True,False,False
+United States,2004,True,False,True,False,False
+United States,2005,False,True,True,False,False
+United States,2006,False,False,True,False,False
+United States,2007,False,False,True,False,False
+United States,2008,True,False,True,False,False
+United States,2009,True,True,False,False,False
+United States,2010,True,False,False,False,False
+United States,2011,True,True,True,False,False
+United States,2012,True,True,True,False,False
+United States,2013,True,True,False,False,False
+United States,2014,False,True,False,False,False
+United States,2015,False,True,False,False,False
+United States,2016,True,False,False,False,False
+United States,2017,True,False,False,False,False
+United States,2018,False,False,True,False,False
+United States,2019,True,False,False,False,False
+United States,2020,True,True,True,False,False
+United States,2021,False,False,True,False,False
+United States,2022,False,False,True,False,False
+United States,2023,False,False,True,False,False
+United States,2024,True,False,True,False,True

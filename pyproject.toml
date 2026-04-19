@@ -1,0 +1,28 @@
+[project]
+name = "mvfa"
+version = "0.1.0"
+description = "Modelo de Viabilidade Fiscal Austriaca"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "matplotlib>=3.8",
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "requests>=2.31",
+  "scipy>=1.13",
+]
+
+[project.optional-dependencies]
+full = [
+  "seaborn>=0.13",
+]
+
+[tool.setuptools]
+py-modules = [
+  "bibliography",
+  "clean_data",
+  "config",
+  "download_data",
+  "main",
+  "output",
+]

@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MVFA - Artigo Técnico</title>
+    <style>
+        :root {
+            --ink: #18212b;
+            --muted: #5f6b76;
+            --paper: #fcfbf7;
+            --line: #d7d1c7;
+            --soft: #f3efe7;
+            --green: #1f6b4f;
+            --amber: #9a6c12;
+            --red: #9f2f2f;
+        }
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+            line-height: 1.65;
+        }
+        main {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 44px 28px 72px;
+        }
+        h1, h2, h3, h4 {
+            color: var(--ink);
+            line-height: 1.25;
+        }
+        h1 {
+            font-size: 2.15rem;
+            margin-bottom: 0.4rem;
+        }
+        h2 {
+            margin-top: 2.6rem;
+            padding-top: 0.6rem;
+            border-top: 1px solid var(--line);
+        }
+        p, li {
+            font-size: 1rem;
+        }
+        .meta {
+            color: var(--muted);
+            margin-bottom: 2rem;
+        }
+        .abstract, .callout {
+            background: var(--soft);
+            border: 1px solid var(--line);
+            padding: 1.1rem 1.2rem;
+            margin: 1.4rem 0 1.8rem;
+        }
+        .grid-two {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+        }
+        .card {
+            border: 1px solid var(--line);
+            background: white;
+            padding: 1rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.3rem 0 1.8rem;
+            font-size: 0.93rem;
+        }
+        th, td {
+            border-bottom: 1px solid var(--line);
+            padding: 0.7rem 0.55rem;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background: #efe9df;
+        }
+        .status-green { color: var(--green); font-weight: 700; }
+        .status-amber { color: var(--amber); font-weight: 700; }
+        .status-red { color: var(--red); font-weight: 700; }
+        .country-note {
+            border-top: 1px solid var(--line);
+            padding-top: 0.9rem;
+            margin-top: 0.9rem;
+        }
+        figure {
+            margin: 1.6rem 0;
+        }
+        img {
+            width: 100%;
+            border: 1px solid var(--line);
+            background: white;
+        }
+        figcaption {
+            color: var(--muted);
+            font-size: 0.92rem;
+            margin-top: 0.55rem;
+        }
+        .small {
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+        .refs li {
+            margin-bottom: 0.45rem;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <h1>Viabilidade Fiscal, Distorções Monetárias e Sustentabilidade Estocástica</h1>
+    <div class="meta">Artigo técnico do Modelo de Viabilidade Fiscal Austríaca (MVFA), ano-base 2024. Painel implementado com 22 unidades e dados anuais de 1995 a 2024 obtidos por API.</div>
+
+    <section class="abstract">
+        <p><strong>Resumo.</strong> Este artigo apresenta a versão revisada do MVFA para avaliar restrições de sustentabilidade fiscal e monetária em um painel internacional. O desenho combina cinco métricas observadas em 2024 (Gap de Domar, diferencial de Wicksell, EMA, ISF e IDEC) com uma análise estocástica de sustentabilidade da dívida baseada em VAR e 10.000 simulações de Monte Carlo. O objetivo não é prever crises, mas verificar se as condições contábeis e monetárias observadas permanecem consistentes com trajetórias não divergentes sob incerteza historicamente calibrada. O texto a seguir elimina ambiguidades de classificação, explicita lacunas de dados, documenta exceções metodológicas, reporta sensibilidade de limiares e separa risco estocástico de limiar de dívida das demais métricas estruturais.</p>
+    </section>
+
+    <h2>1. Revisão de Literatura e Posicionamento</h2>
+    <p>A literatura clássica de sustentabilidade fiscal parte da aritmética de Domar (1944) e, em formulações recentes, da discussão sobre a diferença entre juros e crescimento em Blanchard (2019). Essa tradição enfatiza quando o saldo primário observado deixa de ser compatível com estabilização da dívida. Em paralelo, a literatura institucional de <em>Debt Sustainability Analysis</em> do FMI, da Comissão Europeia e do ESM adicionou cenários, bandas de probabilidade e fan charts para transformar identidades contábeis em diagnósticos probabilísticos de médio prazo.</p>
+    <p>O MVFA se aproxima dessa tradição no seu bloco estocástico: a SDSA do artigo usa um VAR calibrado em dados históricos, exclusão do choque pandêmico de 2020–2021, dummy para 2008–2009 e simulação de Monte Carlo com 10.000 trajetórias. A diferença substantiva é que o modelo não se limita ao eixo dívida/PIB. Ele agrega também o diferencial de Wicksell, a expansão monetária ajustada e um proxy de distorção da estrutura de capital, permitindo separar risco fiscal de fluxo, risco monetário e fragilidade de composição do investimento.</p>
+    <p>Essa diferença de escopo exige cuidado inferencial. O artigo não sustenta que qualquer métrica isolada determine uma crise, nem substitui os exercícios de DSA oficiais. O que ele propõe é um <em>overlay</em> verificável: as contas de Domar e ISF permanecem diretamente comparáveis com a literatura de sustentabilidade fiscal, enquanto Wicksell, EMA e IDEC funcionam como camadas adicionais de diagnóstico monetário e estrutural.</p>
+    <p>O adjetivo “austríaco”, portanto, deve ser entendido como lente interpretativa e escolha de ênfase, não como adesão metodológica estrita à praxeologia ou rejeição completa da econometria. Em sentido estrito, a Escola Austríaca clássica é cética em relação a agregados macroeconômicos, séries de preços e inferência econométrica. O MVFA não resolve essa tensão; ele a declara. O uso de VAR, ADF e Monte Carlo serve aqui como auditoria quantitativa de restrições contábeis e monetárias, não como tentativa de converter a teoria austríaca em econometria padrão.</p>
+
+    <h2>2. Dados e Política de Tratamento</h2>
+    <p>O painel cobre 22 unidades observacionais: 21 países/agregados regionais explicitamente enumerados no enunciado mais o agregado global ponderado por PIB em PPP. O texto original do prompt menciona 23 unidades, mas a própria enumeração fecha em 22; o artigo passa a declarar esse ponto de forma explícita. As séries provêm de fontes oficiais acessadas por API ou download automatizado, com destaque para IMF WEO e Fiscal Monitor, BIS, OECD, World Bank, NY Fed, Richmond Fed, BCRA e BDL.</p>
+    <p>O tratamento de dados foi desenhado para privilegiar observações reais em vez de preenchimentos sinteticamente convenientes. Não há interpolação de séries macro centrais na tabela final; quando uma métrica não pode ser calculada com base observada suficiente, o resultado permanece ausente e a classificação é rebaixada para leitura conservadora. A principal harmonização aplicada de forma sistemática é a atribuição da taxa de política e do estimador HLW da Área do Euro aos membros monetários do painel sem série nacional publicada, o que afeta 5 país(es) no ano-base.</p>
+    <div class="grid-two">
+        <div class="card">
+            <h3>Amostra operacional</h3>
+            <p><strong>15</strong> unidades com cobertura completa nas cinco métricas em 2024.</p>
+            <p><strong>7</strong> unidades com pelo menos uma lacuna explícita, mantida sem imputação ad hoc.</p>
+            <p><strong>6</strong> unidades com cobertura monetária inferior a 100%, o que afeta principalmente a EMA.</p>
+        </div>
+        <div class="card">
+            <h3>Contagem de status</h3>
+            <p><strong>11</strong> INSUSTENTÁVEL</p>
+            <p><strong>11</strong> LIMIAR</p>
+            <p><strong>0</strong> SUSTENTÁVEL</p>
+        </div>
+    </div>
+
+    <h2>3. Construção das Métricas e Regra de Classificação</h2>
+    <p>O Gap de Domar mede a diferença entre o superávit primário requerido e o observado. O diferencial de Wicksell é reportado como intervalo entre estimadores operacionais de r*, combinando séries oficiais (HLW, Lubik-Matthes, FAVAR) e auxiliares transparentes apenas quando necessárias para manter comparabilidade. A EMA mede excesso monetário ajustado por velocidade, crescimento real e meta de inflação. O ISF quantifica a parcela da receita absorvida pelo serviço da dívida. O IDEC mede a relação entre investimento sensível a juros e poupança privada, mas deve ser lido como <em>proxy exploratória</em> de composição do investimento, não como observação direta de “malinvestment” no sentido forte da teoria austríaca do ciclo.</p>
+    <p>A classificação foi revisada para remover inconsistências. O status <strong>INSUSTENTAVEL</strong> exige ao menos uma violação central observada (Gap de Domar superior a 0,5 p.p. do PIB ou ISF maior ou igual a 20%) ou acúmulo de dois sinais auxiliares severos. O status <strong>LIMIAR</strong> é atribuído quando há um único sinal severo auxiliar, sinais amarelos persistentes, cobertura insuficiente em métricas-chave ou um Gap de Domar positivo, porém pequeno, dentro da faixa de materialidade. Essa regra elimina a antiga situação em que um único sinal de Wicksell podia automaticamente reclassificar um país para o grupo mais grave e trata gaps de fluxo muito pequenos com a cautela exigida por erro de mensuração.</p>
+    <p>Como esses limiares continuam normativos, o pipeline agora exporta uma grade de sensibilidade com combinações plausíveis para o gatilho de Domar (0,0; 0,5; 1,0 p.p. do PIB) e para o ISF (18%; 20%; 25%). No recorte de 2024, o número de casos <strong>INSUSTENTÁVEL</strong> varia entre <strong>9</strong> e <strong>12</strong>, enquanto o número de casos <strong>LIMIAR</strong> varia entre <strong>10</strong> e <strong>13</strong>. Em <strong>19</strong> de <strong>22</strong> unidades a classificação final é invariável nessa grade; as mudanças concentram-se em <strong>3</strong> casos de fronteira, incluindo Austrália, Índia, Reino Unido.</p>
+    <div class="callout">
+        <p><strong>Correção metodológica central.</strong> O artigo anterior apresentava intervalos degenerados de Wicksell e comparava probabilidades estocásticas com linguagem vaga de “risco VAR”. Nesta versão, os intervalos são explicitamente calculados como intervalos reais ou reportados como <em>N/A</em> quando a informação é insuficiente; e a saída estocástica é rotulada pelo evento probabilístico efetivamente calculado.</p>
+    </div>
+
+    <h2>4. Desenho Econométrico e Análise Estocástica</h2>
+    <p>A SDSA do MVFA estima um VAR por país com variáveis endógenas de crescimento real do PIB, inflação do deflator, yield nominal de 10 anos, saldo primário/PIB, dívida/PIB e, quando disponível, variação cambial real. A seleção de defasagens segue AIC/BIC com máximo de duas defasagens. O período de estimação-base vai de 1995 a 2019, com exclusão de 2020 e 2021 para evitar contaminação da matriz de covariância por choques excepcionais de pandemia. Há ainda uma dummy para 2008–2009, e os resíduos são winsorizados nos percentis 5 e 95 antes do cálculo de Σ. Como resposta à crítica de amostra “limpa demais”, o pipeline exporta também uma reestimação de sensibilidade com dados de 1995 a 2024, incluindo 2020–2021 e o ajuste pós-pandemia.</p>
+    <p>As 10.000 trajetórias simuladas alimentam a dinâmica da dívida para um horizonte de 10 anos. O artigo passa a reportar duas probabilidades distintas: <strong>Pr[limiar, t+5]</strong>, que é a métrica usada na regra de classificação estocástica do prompt, e <strong>Pr[limiar em qualquer ano até t+5]</strong>, que informa se o cruzamento ocorre em algum ponto do quinquênio. Para a maioria dos países, o limiar é expresso como dívida/PIB acima de 80% (emergentes) ou 120% (avançados). Para o Japão, o critério probabilístico é ISF maior que 25%, conforme a exceção explicitamente prevista no enunciado.</p>
+
+    <h2>5. Testes Econométricos e Estabilidade</h2>
+    <p>Os diagnósticos econométricos deixam de ficar implícitos. O pipeline exporta agora, para cada país, a ordem escolhida do VAR, os critérios de informação, o módulo máximo das raízes da matriz companheira e os testes ADF por variável. No painel estimado, <strong>13</strong> de <strong>22</strong> modelos eram estáveis na forma bruta; <strong>12</strong> especificações receberam regularização espectral leve antes da simulação para reduzir persistência excessiva em pequena amostra. Com isso, <strong>22</strong> de <strong>22</strong> especificações finais satisfazem a condição de estabilidade, com mediana do maior módulo ajustado igual a <strong>0.975</strong>. As tabelas completas estão nos apêndices em <code>var_diagnostics.csv</code> e <code>adf_diagnostics.csv</code>.</p>
+    <p>Os testes ADF não são usados como filtro mecânico para excluir séries, porque o objetivo da SDSA é gerar trajetórias condicionais para razões fiscais e não estimar relações estruturais de longo prazo. Ainda assim, reportá-los é importante para transparência: como esperado, variáveis de fluxo como crescimento, inflação e saldo primário tendem a rejeitar raiz unitária com mais frequência do que dívida/PIB. A Tabela 1A resume a fração de países em que a hipótese nula de raiz unitária é rejeitada a 5%.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Variável</th>
+                <th>Rejeições ADF (5%)</th>
+                <th>Total</th>
+                <th>Participação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Dívida/PIB</td><td>2</td><td>22</td><td>9.1%</td></tr>
+<tr><td>Câmbio real efetivo</td><td>10</td><td>20</td><td>50.0%</td></tr>
+<tr><td>Inflação do deflator</td><td>9</td><td>22</td><td>40.9%</td></tr>
+<tr><td>Crescimento real do PIB</td><td>14</td><td>22</td><td>63.6%</td></tr>
+<tr><td>Saldo primário/PIB</td><td>5</td><td>22</td><td>22.7%</td></tr>
+<tr><td>Yield nominal de 10 anos</td><td>5</td><td>22</td><td>22.7%</td></tr>
+        </tbody>
+    </table>
+
+    <h2>6. Resultados de 2024</h2>
+    <p>A Tabela 1 sintetiza os resultados no ano-base. A coluna de evento estocástico foi renomeada para deixar claro qual limiar está sendo testado; isso elimina a leitura equivocada de que a probabilidade apresentada resuma toda a condição macro-fiscal do país. No corpo do artigo, essas probabilidades passam a ser exibidas em pontos percentuais inteiros para reduzir aparência de falsa precisão em amostras anuais curtas; os valores completos permanecem exportados nas tabelas auxiliares.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>País</th>
+                <th>Gap Domar</th>
+                <th>DeltaW [min,max]</th>
+                <th>EMA (%)</th>
+                <th>ISF (%)</th>
+                <th>IDEC</th>
+                <th>Evento estocástico</th>
+                <th>Pr[limiar, t+5]</th>
+                <th>Pr[limiar, t+1:t+5]</th>
+                <th>Status final</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td>Argentina</td>
+                <td>-190.89</td>
+                <td>[76.86, 156.38]</td>
+                <td>50.08</td>
+                <td>5.08</td>
+                <td>0.95</td>
+                <td>Dívida/PIB &gt; 80%</td>
+                <td>0%</td>
+                <td>0%</td>
+                <td class="status-red">INSUSTENTÁVEL</td>
+            </tr>
+            
+
+            <tr>
+                <td>Austrália</td>
+                <td>0.26</td>
+                <td>[-0.40, 1.14]</td>
+                <td>-2.36</td>
+                <td>2.97</td>
+                <td>0.09</td>
+                <td>Dívida/PIB &gt; 120%</td>
+                <td>0%</td>
+                <td>0%</td>
+                <td class="status-amber">LIMIAR</td>
+            </tr>
+            
+
+            <tr>
+                <td>Brasil</td>
+                <td>0.73</td>
+                <td>[-5.14, -4.47]</td>
+                <td>-5.44</td>
+                <td>16.20</td>
+                <td>2.81</td>
+                <td>Dívida/PIB &gt; 80%</td>
+                <td>94%</td>
+                <td>99%</td>
+                <td class="status-red">INSUSTENTÁVEL</td>
+            </tr>
+            
+
+            <tr>
+                <td>Canadá</td>
+                <td>-2.90</td>
+                <td>[-1.74, 0.57]</td>
+                <td>-0.19</td>
+                <td>0.51</td>
+                <td>0.11</td>
+                <td>Dívida/PIB &gt; 120%</td>
+                <td>0%</td>
+                <td>0%</td>
+                <td class="status-amber">LIMIAR</td>
+            </tr>
+            
+
+            <tr>
+                <td>China</td>
+                <td>3.62</td>
+                <td>[-2.05, -1.16]</td>
+                <td>-5.07</td>
+                <td>3.73</td>
+                <td>0.71</td>
+                <td>Dívida/PIB &gt; 80%</td>
+                <td>97%</td>
+                <td>100%</td>
+                <td class="status-red">INSUSTENTÁVEL</td>
+            </tr>
+            
+
+            <tr>
+                <td>Área do Euro</td>
+                <td>-0.57</td>
+                <td>[-3.37, 1.34]</td>
+                <td>1.07</td>
+                <td>4.09</td>
+                <td>1.34</td>
+                <td>Dívida/PIB &gt; 120%</td>
+                <td>0%</td>
+                <td>0%</td>
+                <td class="status-amber">LIMIAR</td>
+            </tr>
+            
+
+            <tr>
+                <td>Agregado Global</td>
+                <td>-2.65</td>
+                <td>[-2.69, 1.12]</td>
+                <td>-0.65</td>
+                <td>7.33</td>
+                <td>0.02</td>
+                <td>Dívida/PIB &gt; 120%</td>
+                <td>0%</td>
+                <td>0%</td>
+                <td class="status-amber">LIMIAR</td>
+            </tr>
+            
+
+            <tr>
+                <td>Grécia</td>
+                <td>-8.31</td>
+                <td>[-3.17, 1.15]</td>
+                <td>N/A</td>
+                <td>6.62</td>
+                <td>0.73</td>
+                <td>Dívida/PIB &gt; 80%</td>
+                <td>100%</td>
+                <td>100%</td>
+                <td class="status-red">INSUSTENTÁVEL</td>
+            </tr>
+            
+
+            <tr>
+                <td>Índia</td>
+                <td>-0.01</td>
+                <td>[-2.75, -1.04]</td>
+                <td>-2.91</td>
+                <td>24.29</td>
+                <td>1.54</td>
+                <td>Dívida/PIB &gt; 80%</td>
+                <td>16%</td>
+                <td>68%</td>
+                <td class="status-red">INSUSTENTÁVEL</td>
+            </tr>
+            
+
+            <tr>
+                <td>Indonésia</td>
+                <td>-0.05</td>
+                <td>[-4.25, -2.88]</td>
+                <td>-5.39</td>
+                <td>15.10</td>
+                <td>1.18</td>
+                <td>Dívida/PIB &gt; 80%</td>
+                <td>0%</td>
+                <td>0%</td>
+                <td class="status-amber">LIMIAR</td>
+            </tr>
+            
+
+            <tr>
+                <td>Irlanda</td>
+                <td>-6.26</td>
+                <td>[-2.60, 1.34]</td>
+                <td>N/A</td>
+                <td>1.33</td>
+                <td>0.09</td>
+                <td>Dívida/PIB &gt; 120%</td>
+                <td>0%</td>
+                <td>0%</td>
+                <td class="status-amber">LIMIAR</td>
+            </tr>
+            
+
+            <tr>
+                <td>Itália</td>
+                <td>-0.32</td>
+                <td>[-3.17, 0.10]</td>
+                <td>N/A</td>
+                <td>7.94</td>
+                <td>0.10</td>
+                <td>Dívida/PIB &gt; 120%</td>
+                <td>100%</td>
+                <td>100%</td>
+                <td class="status-red">INSUSTENTÁVEL</td>
+            </tr>
+            
+
+            <tr>
+                <td>Japão</td>
+                <td>-4.73</td>
+                <td>[0.71, 5.10]</td>
+                <td>-6.44</td>
+                <td>1.04</td>
+                <td>0.09</td>
+                <td>ISF &gt; 25%</td>
+                <td>0%</td>
+                <td>0%</td>
+                <td class="status-amber">LIMIAR</td>
+            </tr>
+            
+
+            <tr>
+                <td>Líbano</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>4.39</td>
+                <td>N/A</td>
+                <td>Dívida/PIB &gt; 80%</td>
+                <td>100%</td>
+                <td>100%</td>
+                <td class="status-red">INSUSTENTÁVEL</td>
+            </tr>
+            
+
+            <tr>
+                <td>México</td>
+                <td>3.30</td>
+                <td>[-3.84, -3.04]</td>
+                <td>-0.33</td>
+                <td>24.02</td>
+                <td>0.06</td>
+                <td>Dívida/PIB &gt; 80%</td>
+                <td>1%</td>
+                <td>1%</td>
+                <td class="status-red">INSUSTENTÁVEL</td>
+            </tr>
+            
+
+            <tr>
+                <td>Portugal</td>
+                <td>-6.61</td>
+                <td>[-2.52, 2.43]</td>
+                <td>N/A</td>
+                <td>4.17</td>
+                <td>0.13</td>
+                <td>Dívida/PIB &gt; 120%</td>
+                <td>0%</td>
+                <td>0%</td>
+                <td class="status-amber">LIMIAR</td>
+            </tr>
+            
+
+            <tr>
+                <td>Arábia Saudita</td>
+                <td>2.35</td>
+                <td>[-7.96, -3.09]</td>
+                <td>N/A</td>
+                <td>0.33</td>
+                <td>1.45</td>
+                <td>Dívida/PIB &gt; 80%</td>
+                <td>0%</td>
+                <td>0%</td>
+                <td class="status-red">INSUSTENTÁVEL</td>
+            </tr>
+            
+
+            <tr>
+                <td>Coreia do Sul</td>
+                <td>-2.46</td>
+                <td>[-0.27, 2.99]</td>
+                <td>-2.04</td>
+                <td>0.00</td>
+                <td>1.28</td>
+                <td>Dívida/PIB &gt; 120%</td>
+                <td>0%</td>
+                <td>0%</td>
+                <td class="status-amber">LIMIAR</td>
+            </tr>
+            
+
+            <tr>
+                <td>Espanha</td>
+                <td>-3.06</td>
+                <td>[-3.22, 0.98]</td>
+                <td>N/A</td>
+                <td>4.30</td>
+                <td>0.18</td>
+                <td>Dívida/PIB &gt; 120%</td>
+                <td>0%</td>
+                <td>0%</td>
+                <td class="status-amber">LIMIAR</td>
+            </tr>
+            
+
+            <tr>
+                <td>Turquia</td>
+                <td>-10.65</td>
+                <td>[-29.98, 12.88]</td>
+                <td>16.35</td>
+                <td>7.44</td>
+                <td>0.65</td>
+                <td>Dívida/PIB &gt; 80%</td>
+                <td>0%</td>
+                <td>0%</td>
+                <td class="status-amber">LIMIAR</td>
+            </tr>
+            
+
+            <tr>
+                <td>Reino Unido</td>
+                <td>0.66</td>
+                <td>[-2.84, 1.46]</td>
+                <td>4.53</td>
+                <td>5.13</td>
+                <td>0.50</td>
+                <td>Dívida/PIB &gt; 120%</td>
+                <td>0%</td>
+                <td>0%</td>
+                <td class="status-red">INSUSTENTÁVEL</td>
+            </tr>
+            
+
+            <tr>
+                <td>Estados Unidos</td>
+                <td>1.09</td>
+                <td>[-4.23, -0.67]</td>
+                <td>0.50</td>
+                <td>12.19</td>
+                <td>2.73</td>
+                <td>Dívida/PIB &gt; 120%</td>
+                <td>88%</td>
+                <td>99%</td>
+                <td class="status-red">INSUSTENTÁVEL</td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <p class="small"><strong>Tabela 1.</strong> O evento estocástico é especificado país a país. Assim, um valor de 0,0% significa apenas que o limiar adotado na SDSA não foi cruzado nas simulações; ele não apaga sinais contemporâneos adversos nas métricas estáticas.</p>
+
+    <h2>7. Lacunas de Dados e Notas Explicativas</h2>
+    <p>As ausências deixam de aparecer como “N/A” sem contexto. A Tabela 2 resume as métricas faltantes no ano-base e a justificativa operacional. Nos membros periféricos da Área do Euro, a correção de política monetária comum eliminou a perda artificial do Wicksell; a lacuna residual concentra-se sobretudo na EMA, por ausência de agregado monetário comparável no recorte anual adotado. O Líbano permanece como caso de cobertura materialmente incompleta.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>País</th>
+                <th>Métricas faltantes em 2024</th>
+                <th>Explicação operacional</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td>Grécia</td>
+                <td>EMA</td>
+                <td>EMA indisponível no ano-base por ausência de agregado monetário amplo consistente e comparável na coleta via API.</td>
+            </tr>
+            
+
+            <tr>
+                <td>Irlanda</td>
+                <td>EMA</td>
+                <td>EMA indisponível no ano-base por ausência de agregado monetário amplo consistente e comparável na coleta via API.</td>
+            </tr>
+            
+
+            <tr>
+                <td>Itália</td>
+                <td>EMA</td>
+                <td>EMA indisponível no ano-base por ausência de agregado monetário amplo consistente e comparável na coleta via API.</td>
+            </tr>
+            
+
+            <tr>
+                <td>Líbano</td>
+                <td>Domar, DeltaW, EMA, IDEC</td>
+                <td>A classificação foi mantida em chave conservadora por cobertura incompleta em pelo menos duas métricas centrais. As leituras para o Líbano permanecem parciais no ano-base, com lacunas em taxa de política, EMA e IDEC; o caso deve ser lido como evidência incompleta. EMA indisponível no ano-base por ausência de agregado monetário amplo consistente e comparável na coleta via API. IDEC indisponível no ano-base por ausência simultânea de FBCF setorial e de proxy de crédito habitacional suficiente. ΔW indisponível no ano-base porque não houve combinação observável suficiente entre taxa de política real e estimadores de r*. Embora o evento oficial da SDSA use dívida/PIB, a probabilidade simulada de ISF elevado em t+5 permanece alta (100.0%).</td>
+            </tr>
+            
+
+            <tr>
+                <td>Portugal</td>
+                <td>EMA</td>
+                <td>EMA indisponível no ano-base por ausência de agregado monetário amplo consistente e comparável na coleta via API.</td>
+            </tr>
+            
+
+            <tr>
+                <td>Arábia Saudita</td>
+                <td>EMA</td>
+                <td>EMA indisponível no ano-base por ausência de agregado monetário amplo consistente e comparável na coleta via API. Há violação contemporânea de Domar, mas a probabilidade do evento estocástico em cinco anos permanece baixa porque a mediana simulada da dívida em t+5 (2.3% do PIB) segue abaixo do limiar adotado (80% do PIB).</td>
+            </tr>
+            
+
+            <tr>
+                <td>Espanha</td>
+                <td>EMA</td>
+                <td>EMA indisponível no ano-base por ausência de agregado monetário amplo consistente e comparável na coleta via API. Probabilidade de 0,0% aplica-se apenas ao limiar estocástico (dívida/PIB); sinais contemporâneos adversos nas métricas estáticas permanecem relevantes.</td>
+            </tr>
+            
+        </tbody>
+    </table>
+    
+            <div class="country-note">
+                <h4>Argentina</h4>
+                <ul><li>Embora o evento oficial da SDSA use dívida/PIB, a probabilidade simulada de ISF elevado em t+5 permanece alta (99.7%).</li><li>Probabilidade de 0,0% aplica-se apenas ao limiar estocástico (dívida/PIB); sinais contemporâneos adversos nas métricas estáticas permanecem relevantes.</li><li>Gap de Domar muito negativo reflete erosão inflacionária ex post do custo real da dívida; isso não deve ser lido como conforto fiscal estrutural.</li></ul>
+            </div>
+            
+
+            <div class="country-note">
+                <h4>Austrália</h4>
+                <ul><li>O Gap de Domar é positivo, porém pequeno (≤ 0,5 p.p. do PIB); nesta versão ele é tratado como sinal limiar, não como violação central isolada.</li><li>Probabilidade de 0,0% aplica-se apenas ao limiar estocástico (dívida/PIB); sinais contemporâneos adversos nas métricas estáticas permanecem relevantes.</li></ul>
+            </div>
+            
+
+            <div class="country-note">
+                <h4>Brasil</h4>
+                <ul><li>Embora o evento oficial da SDSA use dívida/PIB, a probabilidade simulada de ISF elevado em t+5 permanece alta (57.8%).</li></ul>
+            </div>
+            
+
+            <div class="country-note">
+                <h4>Canadá</h4>
+                <ul><li>Probabilidade de 0,0% aplica-se apenas ao limiar estocástico (dívida/PIB); sinais contemporâneos adversos nas métricas estáticas permanecem relevantes.</li></ul>
+            </div>
+            
+
+            <div class="country-note">
+                <h4>Área do Euro</h4>
+                <ul><li>Probabilidade de 0,0% aplica-se apenas ao limiar estocástico (dívida/PIB); sinais contemporâneos adversos nas métricas estáticas permanecem relevantes.</li></ul>
+            </div>
+            
+
+            <div class="country-note">
+                <h4>Agregado Global</h4>
+                <ul><li>Probabilidade de 0,0% aplica-se apenas ao limiar estocástico (dívida/PIB); sinais contemporâneos adversos nas métricas estáticas permanecem relevantes.</li></ul>
+            </div>
+            
+
+            <div class="country-note">
+                <h4>Grécia</h4>
+                <ul><li>EMA indisponível no ano-base por ausência de agregado monetário amplo consistente e comparável na coleta via API.</li></ul>
+            </div>
+            
+
+            <div class="country-note">
+                <h4>Índia</h4>
+                <ul><li>A diferença entre Pr[limiar, t+5] e Pr[limiar em qualquer ano até t+5] é material (15.9% vs. 68.0%), sugerindo risco de cruzamento antecipado ou transitório dentro do quinquênio.</li><li>Embora o evento oficial da SDSA use dívida/PIB, a probabilidade simulada de ISF elevado em t+5 permanece alta (92.7%).</li><li>O ISF no ano-base excede 20%, caracterizando pressão de serviço da dívida pelo critério central do modelo; a mediana simulada do ISF em t+5 é 23.2%.</li></ul>
+            </div>
+            
+
+            <div class="country-note">
+                <h4>Indonésia</h4>
+                <ul><li>Probabilidade de 0,0% aplica-se apenas ao limiar estocástico (dívida/PIB); sinais contemporâneos adversos nas métricas estáticas permanecem relevantes.</li></ul>
+            </div>
+            
+
+            <div class="country-note">
+                <h4>Irlanda</h4>
+                <ul><li>EMA indisponível no ano-base por ausência de agregado monetário amplo consistente e comparável na coleta via API.</li></ul>
+            </div>
+            
+
+            <div class="country-note">
+                <h4>Itália</h4>
+                <ul><li>EMA indisponível no ano-base por ausência de agregado monetário amplo consistente e comparável na coleta via API.</li></ul>
+            </div>
+            
+
+            <div class="country-note">
+                <h4>Japão</h4>
+                <ul><li>Na SDSA, a probabilidade reportada usa ISF &gt; 25% em cinco anos como critério alternativo, não dívida/PIB &gt; 120%.</li><li>Probabilidade de 0,0% aplica-se apenas ao limiar estocástico (ISF); sinais contemporâneos adversos nas métricas estáticas permanecem relevantes.</li></ul>
+            </div>
+            
+
+            <div class="country-note">
+                <h4>Líbano</h4>
+                <ul><li>A classificação foi mantida em chave conservadora por cobertura incompleta em pelo menos duas métricas centrais.</li><li>As leituras para o Líbano permanecem parciais no ano-base, com lacunas em taxa de política, EMA e IDEC; o caso deve ser lido como evidência incompleta.</li><li>EMA indisponível no ano-base por ausência de agregado monetário amplo consistente e comparável na coleta via API.</li><li>IDEC indisponível no ano-base por ausência simultânea de FBCF setorial e de proxy de crédito habitacional suficiente.</li><li>ΔW indisponível no ano-base porque não houve combinação observável suficiente entre taxa de política real e estimadores de r*.</li><li>Embora o evento oficial da SDSA use dívida/PIB, a probabilidade simulada de ISF elevado em t+5 permanece alta (100.0%).</li></ul>
+            </div>
+            
+
+            <div class="country-note">
+                <h4>México</h4>
+                <ul><li>Há violação contemporânea de Domar, mas a probabilidade do evento estocástico em cinco anos permanece baixa porque a mediana simulada da dívida em t+5 (57.6% do PIB) segue abaixo do limiar adotado (80% do PIB).</li><li>O ISF no ano-base excede 20%, caracterizando pressão de serviço da dívida pelo critério central do modelo; a mediana simulada do ISF em t+5 é 17.2%.</li></ul>
+            </div>
+            
+
+            <div class="country-note">
+                <h4>Portugal</h4>
+                <ul><li>EMA indisponível no ano-base por ausência de agregado monetário amplo consistente e comparável na coleta via API.</li></ul>
+            </div>
+            
+
+            <div class="country-note">
+                <h4>Arábia Saudita</h4>
+                <ul><li>EMA indisponível no ano-base por ausência de agregado monetário amplo consistente e comparável na coleta via API.</li><li>Há violação contemporânea de Domar, mas a probabilidade do evento estocástico em cinco anos permanece baixa porque a mediana simulada da dívida em t+5 (2.3% do PIB) segue abaixo do limiar adotado (80% do PIB).</li></ul>
+            </div>
+            
+
+            <div class="country-note">
+                <h4>Coreia do Sul</h4>
+                <ul><li>Probabilidade de 0,0% aplica-se apenas ao limiar estocástico (dívida/PIB); sinais contemporâneos adversos nas métricas estáticas permanecem relevantes.</li></ul>
+            </div>
+            
+
+            <div class="country-note">
+                <h4>Espanha</h4>
+                <ul><li>EMA indisponível no ano-base por ausência de agregado monetário amplo consistente e comparável na coleta via API.</li><li>Probabilidade de 0,0% aplica-se apenas ao limiar estocástico (dívida/PIB); sinais contemporâneos adversos nas métricas estáticas permanecem relevantes.</li></ul>
+            </div>
+            
+
+            <div class="country-note">
+                <h4>Turquia</h4>
+                <ul><li>Probabilidade de 0,0% refere-se apenas ao evento dívida/PIB &gt; limiar em cinco anos; sob juros reais ex post negativos, a aritmética da dívida melhora mesmo com distorções monetárias correntes elevadas.</li></ul>
+            </div>
+            
+
+            <div class="country-note">
+                <h4>Reino Unido</h4>
+                <ul><li>Há violação contemporânea de Domar, mas a probabilidade do evento estocástico em cinco anos permanece baixa porque a mediana simulada da dívida em t+5 (101.0% do PIB) segue abaixo do limiar adotado (120% do PIB).</li></ul>
+            </div>
+            
+
+    <h2>8. Robustez e Interpretação</h2>
+    <p>Quatro ajustes reforçam a confiabilidade desta versão. Primeiro, o Wicksell passou a usar intervalos efetivos entre estimadores e a registrar explicitamente quando a cobertura é insuficiente. Segundo, o artigo agora diferencia risco estocástico de cruzamento de limiar de dívida das métricas estruturais observadas, o que é particularmente importante para Reino Unido, Austrália e Turquia: a probabilidade de cruzar o limiar pode permanecer baixa mesmo quando há sinal contemporâneo de fluxo fiscal ou distorção monetária. Terceiro, gaps de Domar pequenos deixam de ser tratados como violações centrais automáticas e passam a integrar a zona limiar, o que reduz sensibilidade excessiva a erro de mensuração. Quarto, o cálculo do ISF deixa de aceitar valores negativos mecanicamente derivados de convenções de sinal nas fontes fiscais.</p>
+    <p>A distinção entre <strong>Pr[limiar, t+5]</strong> e <strong>Pr[limiar em qualquer ano até t+5]</strong> deixa de ser apenas notacional. Em <strong>1</strong> unidades, a diferença entre as duas medidas supera 15 p.p., sinalizando que o evento pode ocorrer cedo e depois recuar dentro do horizonte, com destaque para Índia. Em menor magnitude, diferenças ainda relevantes aparecem em Brasil, Estados Unidos. Isso sugere que o ano terminal, isoladamente, pode subestimar a relevância de cruzamentos transitórios para fins de vigilância de risco.</p>
+    <p>A checagem com inclusão da pandemia não altera a leitura central do painel, mas mostra que a escolha da janela histórica importa. Na comparação entre a estimação-base e a reestimação 1995–2024, a mediana da mudança absoluta em <strong>Pr[limiar, t+5]</strong> é de <strong>0%</strong> e a maior mudança observada é de <strong>100%</strong>, com <strong>1</strong> mudança(s) de status estocástico. O maior deslocamento concentra-se em <strong>Líbano</strong>, caso que já aparece no artigo como cobertura incompleta. Isso reduz a crítica de que o efeito da exclusão pandêmica ficava apenas “reconhecido”, mas não mensurado.</p>
+    <p>Persistem limites substantivos. O modelo verifica sustentabilidade matemática, não cronologia de crise. O componente r* continua sujeito a incerteza de mensuração. O IDEC depende de proxies heterogêneas fora do núcleo OECD. E a simulação estocástica ainda propaga incerteza de choque, não toda a incerteza de parâmetro do VAR; por isso as probabilidades devem ser lidas como medidas de <em>screening</em> e não como frequências estruturais exatas.</p>
+
+    <h2>9. Figuras Selecionadas</h2>
+    <p>As figuras abaixo ilustram três configurações distintas do modelo: um avançado com alta probabilidade de cruzamento do limiar, um emergente com risco elevado no quinquênio e um caso em que a probabilidade do limiar de dívida é baixa apesar de um sinal fiscal contemporâneo positivo em Domar.</p>
+    
+                <figure>
+                    <img src="charts/united_states_fan_chart.png" alt="Fan chart de Estados Unidos">
+                    <figcaption><strong>Estados Unidos.</strong> Economia avançada com probabilidade elevada de cruzamento do limiar de dívida.</figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="charts/brazil_fan_chart.png" alt="Fan chart de Brasil">
+                    <figcaption><strong>Brasil.</strong> Emergente com elevada probabilidade de violação do limiar em cinco anos.</figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="charts/united_kingdom_fan_chart.png" alt="Fan chart de Reino Unido">
+                    <figcaption><strong>Reino Unido.</strong> Caso em que a restrição de Domar é positiva, mas a mediana de dívida projetada ainda permanece abaixo do limiar de 120% do PIB.</figcaption>
+                </figure>
+                
+
+    <h2>10. Conclusão</h2>
+    <p>Os resultados revisados sugerem que o painel não pode ser resumido por uma única narrativa de risco. Há economias em que a restrição de Domar ou o ISF já indicam pressão fiscal observada; há outras em que o principal sinal vem de distorções monetárias acumuladas; e há casos em que a leitura permanece necessariamente parcial por falta de cobertura monetária ou setorial compatível. A contribuição empírica do MVFA, nesta versão, está em separar esses canais com regras transparentes, notas explícitas, sensibilidade de limiares e saída estocástica corretamente rotulada. Isso torna o artigo auditável: um leitor pode discordar do enquadramento teórico, mas consegue verificar o cálculo, a origem dos dados e o limite de cada inferência.</p>
+    <p>A ausência de casos <strong>SUSTENTÁVEL</strong> no recorte-base não deve ser lida como “prova de colapso global inevitável”. Ela reflete uma regra conservadora em que o rótulo benigno exige simultaneamente ausência de violação central, poucos sinais auxiliares e cobertura adequada. Em termos práticos, o MVFA é mais confiável como instrumento de triagem disciplinada do que como oráculo quantitativo de crise.</p>
+
+    <h2>Referências Selecionadas</h2>
+    <ol class="refs">
+        <li><strong>A5</strong>. Wicksell, K. (1898). Interest and Prices (Geldzins und Güterpreise).</li>
+<li><strong>C1</strong>. Laubach, T. &amp; Williams, J. C. (2003).</li>
+<li><strong>C2</strong>. Holston, K., Laubach, T. &amp; Williams, J. C. (2017).</li>
+<li><strong>C3</strong>. Lubik, T. A. &amp; Matthes, C. (2015).</li>
+<li><strong>D1</strong>. Domar, E. D. (1944).</li>
+<li><strong>D2</strong>. Yoshino, N. &amp; Miyamoto, H. (2021).</li>
+<li><strong>D5</strong>. Blanchard, O. (2019).</li>
+<li><strong>E1</strong>. Garcia, M. &amp; Rigobon, R. (2004).</li>
+<li><strong>E2</strong>. Hostland, D. &amp; Karam, P. (2005).</li>
+<li><strong>E3</strong>. Zenios, S., Consiglio, A. &amp; Carollo, A. (2021).</li>
+<li><strong>E4</strong>. IMF (2021).</li>
+<li><strong>E5</strong>. European Commission (2024).</li>
+<li><strong>E6</strong>. European Stability Mechanism (2025).</li>
+<li><strong>G1</strong>. IMF Global Debt Database (GDD) — dívida pública e privada, 1950–2024:</li>
+<li><strong>G2</strong>. IMF World Economic Outlook Database — PIB, crescimento, inflação:</li>
+<li><strong>G3</strong>. IMF Fiscal Monitor — saldo primário, juros pagos, receita fiscal:</li>
+<li><strong>H5</strong>. European Commission DG ECFIN (2025).</li>
+    </ol>
+</main>
+</body>
+</html>

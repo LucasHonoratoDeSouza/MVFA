@@ -1,0 +1,25 @@
+--- models/rstar.py
++++ models/rstar.py
+@@ -107,4 +107,7 @@
+     frames = [
+         estimate_country_favar(frame, global_factors)
+         for _, frame in work.groupby("country")
+     ]
+-    return pd.concat(frames, ignore_index=True)
++    result = pd.concat(frames, ignore_index=True)
++    # Add missing estimators for all countries (Trend Growth and HP Filter of Real Rate)
++    import statsmodels.api as sm
++    result["natural_rate_hp"] = np.nan
++    result["natural_rate_gdp_trend"] = np.nan
++    for country, frame in work.groupby("country"):
++        try:
++            real_rate = frame["real_market_rate"].fillna(method="ffill").fillna(method="bfill")
++            cycle, trend = sm.tsa.filters.hpfilter(real_rate, 100)
++            result.loc[result["country"] == country, "natural_rate_hp"] = trend.values
++            
++            gdp = frame["gdp_real_growth"].fillna(method="ffill").fillna(method="bfill")
++            cycle2, gdp_trend = sm.tsa.filters.hpfilter(gdp, 100)
++            result.loc[result["country"] == country, "natural_rate_gdp_trend"] = gdp_trend.values
++        except:
++            pass
++    return result

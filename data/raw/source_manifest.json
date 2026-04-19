@@ -1,0 +1,24 @@
+{
+  "panel_output": "/home/lucas/dados escola austriaca/data/raw/panel.csv",
+  "quarterly_output": "/home/lucas/dados escola austriaca/data/raw/quarterly_panel.csv",
+  "quality_output": "/home/lucas/dados escola austriaca/data/raw/data_quality.csv",
+  "sources": {
+    "imf_datamapper_api": "https://www.imf.org/external/datamapper/api/v1/",
+    "imf_weo_country_tsv": "https://www.imf.org/-/media/files/publications/weo/weo-database/2025/april/weoapr2025all.xls",
+    "world_bank_api": "https://api.worldbank.org/v2/",
+    "eurostat_api": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/",
+    "bis_api_doc": "https://stats.bis.org/api-doc/v2/",
+    "bis_data_api": "https://stats.bis.org/api/v2/",
+    "oecd_api": "https://sdmx.oecd.org/public/rest/",
+    "nyfed_hlw_xlsx": "https://www.newyorkfed.org/medialibrary/media/research/economists/williams/data/Holston_Laubach_Williams_current_estimates.xlsx",
+    "richmond_lm_page": "https://www.richmondfed.org/research/national_economy/natural_rate_interest",
+    "bdl_money_supply_history": "https://bdl.gov.lb/moneysupplyhistory.php",
+    "bdl_base_url": "https://www.banqueduliban.gov.lb/",
+    "bcra_api": "https://api.bcra.gob.ar/estadisticas/v4.0/"
+  },
+  "notes": [
+    "panel.csv e construido inteiramente a partir de APIs e downloads oficiais.",
+    "quarterly_panel.csv agrega as series de maior frequencia disponiveis.",
+    "data_quality.csv resume a cobertura efetiva por pais."
+  ]
+}

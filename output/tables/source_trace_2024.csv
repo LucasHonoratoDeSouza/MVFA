@@ -1,0 +1,23 @@
+country,year,money_source,policy_source,yield_source,hlw_source,idec_source,reserve_currency_flag,threshold_debt_gdp
+Argentina,2024,bcra_m2,bis_cbpol,bcra_badlar_proxy,,bis_household_share_proxy,0,80.0
+Australia,2024,oecd_monagg_m3,bis_cbpol,realized_funding_cost_proxy,,oecd_table8_activity,0,120.0
+Brazil,2024,oecd_monagg_m3,bis_cbpol,realized_funding_cost_proxy,,bis_household_share_proxy,0,80.0
+Canada,2024,oecd_monagg_m3,bis_cbpol,realized_funding_cost_proxy,nyfed_hlw,oecd_table8_activity,0,120.0
+China,2024,oecd_monagg_m3,bis_cbpol,realized_funding_cost_proxy,,bis_household_share_proxy,0,80.0
+Euro Area,2024,oecd_monagg_m3,bis_cbpol,oecd_finmark_irlt,nyfed_hlw,bis_household_share_proxy,0,120.0
+Global Aggregate,2024,,ppp_weighted_aggregate,ppp_weighted_aggregate,ppp_weighted_aggregate,ppp_weighted_aggregate,0,120.0
+Greece,2024,,euro_area_shared_policy_rate,realized_funding_cost_proxy,nyfed_hlw_euro_area_proxy,oecd_table8_activity,0,80.0
+India,2024,oecd_monagg_m3,bis_cbpol,realized_funding_cost_proxy,,bis_household_share_proxy,0,80.0
+Indonesia,2024,oecd_monagg_m3,bis_cbpol,realized_funding_cost_proxy,,bis_household_share_proxy,0,80.0
+Ireland,2024,,euro_area_shared_policy_rate,realized_funding_cost_proxy,nyfed_hlw_euro_area_proxy,oecd_table8_activity,0,120.0
+Italy,2024,,euro_area_shared_policy_rate,realized_funding_cost_proxy,nyfed_hlw_euro_area_proxy,oecd_table8_activity,0,120.0
+Japan,2024,oecd_monagg_m3,bis_cbpol,realized_funding_cost_proxy,,oecd_table8_activity,0,120.0
+Lebanon,2024,bdl_money_supply_m2,,realized_funding_cost_proxy,,bis_household_share_proxy,0,80.0
+Mexico,2024,oecd_monagg_m3,bis_cbpol,realized_funding_cost_proxy,,oecd_table8_activity,0,80.0
+Portugal,2024,,euro_area_shared_policy_rate,realized_funding_cost_proxy,nyfed_hlw_euro_area_proxy,oecd_table8_activity,0,120.0
+Saudi Arabia,2024,,bis_cbpol,realized_funding_cost_proxy,,bis_household_share_proxy,0,80.0
+South Korea,2024,oecd_monagg_m3,bis_cbpol,realized_funding_cost_proxy,,oecd_table8_activity,0,120.0
+Spain,2024,,euro_area_shared_policy_rate,realized_funding_cost_proxy,nyfed_hlw_euro_area_proxy,oecd_table8_activity,0,120.0
+Turkey,2024,oecd_monagg_m3,bis_cbpol,realized_funding_cost_proxy,,bis_household_share_proxy,0,80.0
+United Kingdom,2024,oecd_monagg_m3,bis_cbpol,realized_funding_cost_proxy,,oecd_table8_activity,0,120.0
+United States,2024,oecd_monagg_m3,bis_cbpol,oecd_finmark_irlt,nyfed_hlw,bis_household_share_proxy,1,120.0

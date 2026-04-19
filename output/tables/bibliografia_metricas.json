@@ -1,0 +1,199 @@
+{
+  "domar_gap": [
+    {
+      "entry_id": "A1",
+      "block": "ESCOLA AUSTRÍACA (obras primárias)",
+      "citation": "Mises, L. von (1912). The Theory of Money and Credit."
+    },
+    {
+      "entry_id": "A2",
+      "block": "ESCOLA AUSTRÍACA (obras primárias)",
+      "citation": "Mises, L. von (1949). Human Action: A Treatise on Economics."
+    },
+    {
+      "entry_id": "D1",
+      "block": "SUSTENTABILIDADE FISCAL E CONDIÇÃO DE DOMAR",
+      "citation": "Domar, E. D. (1944)."
+    },
+    {
+      "entry_id": "D2",
+      "block": "SUSTENTABILIDADE FISCAL E CONDIÇÃO DE DOMAR",
+      "citation": "Yoshino, N. & Miyamoto, H. (2021)."
+    },
+    {
+      "entry_id": "D3",
+      "block": "SUSTENTABILIDADE FISCAL E CONDIÇÃO DE DOMAR",
+      "citation": "Yoshino, N. & Taghizadeh-Hesary, F. (2021)."
+    },
+    {
+      "entry_id": "D4",
+      "block": "SUSTENTABILIDADE FISCAL E CONDIÇÃO DE DOMAR",
+      "citation": "Eguchi, M. & Hatano, T. (2023)."
+    },
+    {
+      "entry_id": "D5",
+      "block": "SUSTENTABILIDADE FISCAL E CONDIÇÃO DE DOMAR",
+      "citation": "Blanchard, O. (2019)."
+    }
+  ],
+  "wicksell_gap": [
+    {
+      "entry_id": "A3",
+      "block": "ESCOLA AUSTRÍACA (obras primárias)",
+      "citation": "Hayek, F. A. (1931/1933/1935). Prices and Production and Other Works"
+    },
+    {
+      "entry_id": "A5",
+      "block": "ESCOLA AUSTRÍACA (obras primárias)",
+      "citation": "Wicksell, K. (1898). Interest and Prices (Geldzins und Güterpreise)."
+    },
+    {
+      "entry_id": "C1",
+      "block": "TAXA NATURAL DE JUROS (r*)",
+      "citation": "Laubach, T. & Williams, J. C. (2003)."
+    },
+    {
+      "entry_id": "C2",
+      "block": "TAXA NATURAL DE JUROS (r*)",
+      "citation": "Holston, K., Laubach, T. & Williams, J. C. (2017)."
+    },
+    {
+      "entry_id": "C3",
+      "block": "TAXA NATURAL DE JUROS (r*)",
+      "citation": "Lubik, T. A. & Matthes, C. (2015)."
+    },
+    {
+      "entry_id": "C4",
+      "block": "TAXA NATURAL DE JUROS (r*)",
+      "citation": "Nadal De Simone, F. (2024)."
+    },
+    {
+      "entry_id": "C5",
+      "block": "TAXA NATURAL DE JUROS (r*)",
+      "citation": "Laubach, T. & Williams, J. C. (2016)."
+    },
+    {
+      "entry_id": "C7",
+      "block": "TAXA NATURAL DE JUROS (r*)",
+      "citation": "Rachel, L. & Smith, T. D. (2017)."
+    }
+  ],
+  "ema": [
+    {
+      "entry_id": "A1",
+      "block": "ESCOLA AUSTRÍACA (obras primárias)",
+      "citation": "Mises, L. von (1912). The Theory of Money and Credit."
+    },
+    {
+      "entry_id": "B2",
+      "block": "ESCOLA AUSTRÍACA (obras secundárias/modernas)",
+      "citation": "Huerta de Soto, J. (2006). Money, Bank Credit, and Economic Cycles (4th ed.)."
+    },
+    {
+      "entry_id": "F1",
+      "block": "TEORIA MONETÁRIA COMPLEMENTAR",
+      "citation": "Fisher, I. (1911). The Purchasing Power of Money."
+    },
+    {
+      "entry_id": "F2",
+      "block": "TEORIA MONETÁRIA COMPLEMENTAR",
+      "citation": "Friedman, M. & Schwartz, A. J. (1963)."
+    }
+  ],
+  "isf": [
+    {
+      "entry_id": "D2",
+      "block": "SUSTENTABILIDADE FISCAL E CONDIÇÃO DE DOMAR",
+      "citation": "Yoshino, N. & Miyamoto, H. (2021)."
+    },
+    {
+      "entry_id": "D3",
+      "block": "SUSTENTABILIDADE FISCAL E CONDIÇÃO DE DOMAR",
+      "citation": "Yoshino, N. & Taghizadeh-Hesary, F. (2021)."
+    },
+    {
+      "entry_id": "D5",
+      "block": "SUSTENTABILIDADE FISCAL E CONDIÇÃO DE DOMAR",
+      "citation": "Blanchard, O. (2019)."
+    },
+    {
+      "entry_id": "E1",
+      "block": "STOCHASTIC DEBT SUSTAINABILITY ANALYSIS (SDSA)",
+      "citation": "Garcia, M. & Rigobon, R. (2004)."
+    },
+    {
+      "entry_id": "E2",
+      "block": "STOCHASTIC DEBT SUSTAINABILITY ANALYSIS (SDSA)",
+      "citation": "Hostland, D. & Karam, P. (2005)."
+    }
+  ],
+  "idec": [
+    {
+      "entry_id": "A3",
+      "block": "ESCOLA AUSTRÍACA (obras primárias)",
+      "citation": "Hayek, F. A. (1931/1933/1935). Prices and Production and Other Works"
+    },
+    {
+      "entry_id": "A4",
+      "block": "ESCOLA AUSTRÍACA (obras primárias)",
+      "citation": "Hayek, F. A. (1941). The Pure Theory of Capital."
+    },
+    {
+      "entry_id": "A6",
+      "block": "ESCOLA AUSTRÍACA (obras primárias)",
+      "citation": "Böhm-Bawerk, E. von (1889). Capital and Interest (3 vols.)."
+    },
+    {
+      "entry_id": "B1",
+      "block": "ESCOLA AUSTRÍACA (obras secundárias/modernas)",
+      "citation": "Garrison, R. W. (2001). Time and Money: The Macroeconomics of Capital Structure."
+    },
+    {
+      "entry_id": "B2",
+      "block": "ESCOLA AUSTRÍACA (obras secundárias/modernas)",
+      "citation": "Huerta de Soto, J. (2006). Money, Bank Credit, and Economic Cycles (4th ed.)."
+    },
+    {
+      "entry_id": "B4",
+      "block": "ESCOLA AUSTRÍACA (obras secundárias/modernas)",
+      "citation": "Rothbard, M. N. (1962). Man, Economy, and State (Scholar's Edition)."
+    }
+  ],
+  "sdsa": [
+    {
+      "entry_id": "E1",
+      "block": "STOCHASTIC DEBT SUSTAINABILITY ANALYSIS (SDSA)",
+      "citation": "Garcia, M. & Rigobon, R. (2004)."
+    },
+    {
+      "entry_id": "E2",
+      "block": "STOCHASTIC DEBT SUSTAINABILITY ANALYSIS (SDSA)",
+      "citation": "Hostland, D. & Karam, P. (2005)."
+    },
+    {
+      "entry_id": "E3",
+      "block": "STOCHASTIC DEBT SUSTAINABILITY ANALYSIS (SDSA)",
+      "citation": "Zenios, S., Consiglio, A. & Carollo, A. (2021)."
+    },
+    {
+      "entry_id": "E4",
+      "block": "STOCHASTIC DEBT SUSTAINABILITY ANALYSIS (SDSA)",
+      "citation": "IMF (2021)."
+    },
+    {
+      "entry_id": "E5",
+      "block": "STOCHASTIC DEBT SUSTAINABILITY ANALYSIS (SDSA)",
+      "citation": "European Commission (2024)."
+    },
+    {
+      "entry_id": "E6",
+      "block": "STOCHASTIC DEBT SUSTAINABILITY ANALYSIS (SDSA)",
+      "citation": "European Stability Mechanism (2025)."
+    },
+    {
+      "entry_id": "H5",
+      "block": "PAPERS TÉCNICOS COMPLEMENTARES (validação e robustez)",
+      "citation": "European Commission DG ECFIN (2025)."
+    }
+  ]
+}
